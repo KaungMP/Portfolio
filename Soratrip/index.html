@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoraTrip</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="img/favicon.png" rel="icon">
+</head>
+<body>
+<!-- HEADER -->
+<header>
+  <div class="logo">
+    <img src="img/logo.png" alt="SoraTrip Logo">
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="service.html">Service</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Book your next flight with ease</h1>
+  </div>
+
+</section>
+
+<section class="booking">
+    <div class="trip-options">
+      <label><input type="radio" name="trip" checked> Round Trip</label>
+      <label><input type="radio" name="trip"> One Way</label>
+      <label><input type="radio" name="trip"> Multi-city</label>
+    </div>
+
+    <form class="flight-form">
+      <input type="text" placeholder="From">
+      <input type="text" placeholder="To">
+      <input type="date">
+      <input type="date">
+      <label><input type="checkbox" checked> Direct Trip</label>
+      <button type="submit">Search</button>
+    </form>
+  </section>
+
+  <section class="why">
+    <h2>Why Choose SoraTrip?</h2>
+    <ul>
+      <li>Affordable</li>
+      <li>Fast Booking</li>
+      <li>Trusted</li>
+    </ul>
+    <button>View Flight</button>
+  </section>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const tripRadios = document.querySelectorAll('input[name="trip"]');
+    const dates = document.querySelectorAll('.flight-form input[type="date"]');
+    const [depart, ret] = dates;
+
+    // Set min date = today
+    const today = new Date().toISOString().slice(0,10);
+    dates.forEach(d => d.min = today);
+
+    // Disable return on "One Way"
+    const updateTripMode = () => {
+    const value = [...tripRadios].find(r => r.checked)?.parentElement?.textContent?.trim() || 'Round Trip';
+    const oneWay = /one\s*way/i.test(value);
+    ret.disabled = oneWay;
+    ret.parentElement?.classList?.toggle('disabled', oneWay);
+    if (oneWay) ret.value = '';
+    };
+
+    tripRadios.forEach(r => r.addEventListener('change', updateTripMode));
+    updateTripMode();
+
+    // Prevent empty submit (demo)
+    document.querySelector('.flight-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    alert('Searching flights… (demo)');
+    });
+    });
+  </script>
+
+
+  <footer>
+    <p>©2025 SoraTrip All Rights Reserved</p>
+  </footer>
+</body>
+</html>
+
