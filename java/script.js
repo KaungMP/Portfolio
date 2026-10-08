@@ -79,15 +79,15 @@ document.addEventListener('DOMContentLoaded', () => {
       nav: { work: "Work", about: "About", contact: "Contact" },
       hero: {
         hi: "Hi, I’m ",
-        subtitle: "Turning ideas into beautiful experiences.",
-        desc: "I design and build beautiful websites that solve real user problems. Case studies below."
+        subtitle: "Web Designer · UI/UX · Front-End",
+        desc: "I design and build clean, thoughtful digital experiences with a focus on usability, responsive interfaces and clear visual communication."
       },
-      cta: { viewWork: "View My Work", downloadResume: "Download Resume" },
+      cta: { viewWork: "View My Work", aboutMe: "About Me", downloadResume: "Download Resume" },
       work: {
         title: "Selected Work",
-        p1: { title: "Project One", desc: "Designed for Invitation of the Artist/Writer" },
-        p2: { title: "Project Two", desc: "Air-ticket booking website — focused on simplicity and usability" },
-        p3: { title: "Project Three", desc: "Tech store — focused on simple browsing" }
+        p1: { title: "KhitSam", desc: "Artist & writer invitation platform · Web Design" },
+        p2: { title: "SoraTrip", desc: "Flight booking experience · UI/UX & Front-End" },
+        p3: { title: "Technest", desc: "Technology e-commerce concept · Web Design" }
 },
       about: {
         title: "About Me",
@@ -126,15 +126,15 @@ document.addEventListener('DOMContentLoaded', () => {
       nav: { work: "制作実績", about: "プロフィール", contact: "お問い合わせ" },
       hero: {
         hi: "はじめまして。",
-        subtitle: "「アイデアを美しい体験へと変える」",
-        desc: "実際の課題を解決する美しいWebサイトを設計・制作します。下記に事例を掲載しています。"
+        subtitle: "Webデザイナー · UI/UX · フロントエンド",
+        desc: "使いやすさ、レスポンシブ設計、分かりやすいビジュアル表現を大切にし、クリーンで丁寧なデジタル体験をデザイン・制作しています。"
       },
-      cta: { viewWork: "実績を見る", downloadResume: "履歴書をダウンロード" },
+      cta: { viewWork: "実績を見る", aboutMe: "自己紹介", downloadResume: "履歴書をダウンロード" },
       work: {
         title: "制作実績",
-        p1: { title: "プロジェクト１", desc: "アーティスト／作家の招待用にデザイン" },
-        p2: { title: "プロジェクト２", desc: "航空券予約サイト ― シンプルで使いやすさ重視" },
-        p3: { title: "プロジェクト３", desc: "シンプルに探せる、テックストア" }
+        p1: { title: "KhitSam", desc: "アーティスト・作家向け招待プラットフォーム · Webデザイン" },
+        p2: { title: "SoraTrip", desc: "航空券予約体験 · UI/UX・フロントエンド" },
+        p3: { title: "Technest", desc: "テクノロジーECサイト · Webデザイン" }
       },
       about: {
         title: "自己紹介",
